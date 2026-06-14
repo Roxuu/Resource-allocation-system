@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1226</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>СИСТЕМА ПІДТРИМКИ ПРИЙНЯТТЯ РІШЕНЬ " С о л о н - 3 "</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1226</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_file">
+    <property name="title">
+     <string>Проблема</string>
+    </property>
+    <addaction name="action_file_new"/>
+    <addaction name="action_file_open"/>
+    <addaction name="action_file_save"/>
+    <addaction name="action_file_save_as"/>
+    <addaction name="separator_file_1"/>
+    <addaction name="action_file_print"/>
+    <addaction name="action_file_print_setup"/>
+    <addaction name="separator_file_2"/>
+    <addaction name="action_file_close"/>
+    <addaction name="action_file_exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_search">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Вибір</string>
+    </property>
+    <addaction name="action_search_goal"/>
+    <addaction name="action_search_project"/>
+    <addaction name="separator_search_1"/>
+    <addaction name="action_search_not_opening_node"/>
+    <addaction name="action_search_not_determin_chkv_node"/>
+   </widget>
+   <widget class="QMenu" name="menu_ratio">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Коефіцієнти впливу</string>
+    </property>
+    <addaction name="action_non_group_estimate"/>
+    <addaction name="action_group_estimate"/>
+   </widget>
+   <widget class="QMenu" name="menu_valuation">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Розрахувати</string>
+    </property>
+    <addaction name="action_valuation_project"/>
+    <addaction name="action_potential_valuation_project"/>
+    <addaction name="action_valuation_goal"/>
+    <addaction name="action_valuation_project_regard_fulfilment"/>
+    <addaction name="action_reach_degree_instead_effect"/>
+   </widget>
+   <widget class="QMenu" name="menu_help">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="action_help_contents"/>
+    <addaction name="action_help_search"/>
+    <addaction name="action_help_how_to_use"/>
+    <addaction name="separator_help_1"/>
+    <addaction name="action_help_about"/>
+   </widget>
+   <addaction name="menu_file"/>
+   <addaction name="menu_search"/>
+   <addaction name="menu_ratio"/>
+   <addaction name="menu_valuation"/>
+   <addaction name="menu_help"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>Основна панель</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <addaction name="action_file_new"/>
+   <addaction name="action_file_open"/>
+   <addaction name="action_file_save"/>
+   <addaction name="separator_toolbar_1"/>
+   <addaction name="action_help_about"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_file_new">
+   <property name="text">
+    <string>Нова</string>
+   </property>
+   <property name="toolTip">
+    <string>Задати нову проблему</string>
+   </property>
+   <property name="statusTip">
+    <string>Задати нову проблему</string>
+   </property>
+  </action>
+  <action name="action_file_open">
+   <property name="text">
+    <string>Відкрити...</string>
+   </property>
+   <property name="toolTip">
+    <string>Вибір існуючої проблеми</string>
+   </property>
+   <property name="statusTip">
+    <string>Вибір існуючої проблеми</string>
+   </property>
+  </action>
+  <action name="action_file_save">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Зберегти</string>
+   </property>
+   <property name="toolTip">
+    <string>Зберегти поточну проблему</string>
+   </property>
+   <property name="statusTip">
+    <string>Зберегти поточну проблему</string>
+   </property>
+  </action>
+  <action name="action_file_save_as">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Зберегти як...</string>
+   </property>
+   <property name="toolTip">
+    <string>Зберегти проблему під іншою назвою</string>
+   </property>
+   <property name="statusTip">
+    <string>Зберегти проблему під іншою назвою</string>
+   </property>
+  </action>
+  <action name="separator_file_1">
+   <property name="separator">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_file_print">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Друк</string>
+   </property>
+   <property name="toolTip">
+    <string>Роздрукувати структуру поточної проблеми</string>
+   </property>
+   <property name="statusTip">
+    <string>Роздрукувати структуру поточної проблеми</string>
+   </property>
+  </action>
+  <action name="action_file_print_setup">
+   <property name="text">
+    <string>Установки принтера...</string>
+   </property>
+   <property name="toolTip">
+    <string>Змінити установки принтера</string>
+   </property>
+   <property name="statusTip">
+    <string>Змінити установки принтера</string>
+   </property>
+  </action>
+  <action name="separator_file_2">
+   <property name="separator">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_file_close">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Закрити</string>
+   </property>
+  </action>
+  <action name="action_file_exit">
+   <property name="text">
+    <string>Вихід</string>
+   </property>
+   <property name="toolTip">
+    <string>Вихід із системи</string>
+   </property>
+   <property name="statusTip">
+    <string>Вихід із системи</string>
+   </property>
+  </action>
+  <action name="action_search_goal">
+   <property name="text">
+    <string>Вибір цілі зі списку</string>
+   </property>
+  </action>
+  <action name="action_search_project">
+   <property name="text">
+    <string>Вибір проекту зі списку</string>
+   </property>
+  </action>
+  <action name="separator_search_1">
+   <property name="separator">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_search_not_opening_node">
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Список не розкритих вершин</string>
+   </property>
+   <property name="toolTip">
+    <string>Вибір вершини зі списку вершин, для яких ще не визначили підцілі</string>
+   </property>
+   <property name="statusTip">
+    <string>Вибір вершини зі списку вершин, для яких ще не визначили підцілі</string>
+   </property>
+  </action>
+  <action name="action_search_not_determin_chkv_node">
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Список вершин, для яких не розраховані ЧКВ</string>
+   </property>
+   <property name="toolTip">
+    <string>Вибір вершини зі списку вершин, для яких ще не визначили ЧКВ</string>
+   </property>
+   <property name="statusTip">
+    <string>Вибір вершини зі списку вершин, для яких ще не визначили ЧКВ</string>
+   </property>
+  </action>
+  <action name="action_non_group_estimate">
+   <property name="text">
+    <string>Безпосередня оцінка</string>
+   </property>
+  </action>
+  <action name="action_group_estimate">
+   <property name="text">
+    <string>Запуск сервера для групової оцінки</string>
+   </property>
+  </action>
+  <action name="action_valuation_project">
+   <property name="text">
+    <string>Ефективність проектів</string>
+   </property>
+   <property name="toolTip">
+    <string>Оцінка ефективності проекта або проектів</string>
+   </property>
+   <property name="statusTip">
+    <string>Оцінка ефективності проекта або проектів</string>
+   </property>
+  </action>
+  <action name="action_potential_valuation_project">
+   <property name="text">
+    <string>Потенційна ефективність проектів</string>
+   </property>
+   <property name="toolTip">
+    <string>Оцінка потенціальної ефективності проекта або проектів</string>
+   </property>
+   <property name="statusTip">
+    <string>Оцінка потенціальної ефективності проекта або проектів</string>
+   </property>
+  </action>
+  <action name="action_valuation_goal">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Ефективність цілей</string>
+   </property>
+   <property name="toolTip">
+    <string>Оцінка ефективності цілі або цілей</string>
+   </property>
+   <property name="statusTip">
+    <string>Оцінка ефективності цілі або цілей</string>
+   </property>
+  </action>
+  <action name="action_valuation_project_regard_fulfilment">
+   <property name="text">
+    <string>Урахування ступеня виконання</string>
+   </property>
+  </action>
+  <action name="action_reach_degree_instead_effect">
+   <property name="text">
+    <string>Не ефективність а ступінь досягнення</string>
+   </property>
+  </action>
+  <action name="action_help_contents">
+   <property name="text">
+    <string>Зміст</string>
+   </property>
+  </action>
+  <action name="action_help_search">
+   <property name="text">
+    <string>Пошук допомоги по...</string>
+   </property>
+  </action>
+  <action name="action_help_how_to_use">
+   <property name="text">
+    <string>Як використовувати допомогу</string>
+   </property>
+  </action>
+  <action name="separator_help_1">
+   <property name="separator">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_help_about">
+   <property name="text">
+    <string>Про...</string>
+   </property>
+  </action>
+  <action name="separator_toolbar_1">
+   <property name="separator">
+    <bool>true</bool>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
