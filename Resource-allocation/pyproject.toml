@@ -1,0 +1,5 @@
+[project]
+name = "PySide Project"
+
+[tool.pyside6-project]
+files = ["core/__init__.py", "core/models/__init__.py", "core/models/character.py", "core/models/connection.py", "core/models/node.py", "core/models/project_model.py", "core/services/__init__.py", "core/services/project_io.py", "core/state/__init__.py", "main.py", "ui/connection_dialog.py", "ui/hierarchy_view.py", "ui/hierarchy_window.py", "ui/main_window.py", "ui/main_window.ui", "ui/node_dialog.py"]
